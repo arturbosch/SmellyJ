@@ -1,0 +1,41 @@
+buildscript {
+    ext.kotlin_version = '1.0.3'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+plugins {
+    id "org.jetbrains.intellij" version "0.1.10"
+}
+
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'kotlin'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+intellij {
+    version 'IC-2016.2'
+    pluginName 'SmellyJ'
+    updateSinceUntilBuild = false
+    publish {
+        username 'artismarti'
+        password '' // please fill in
+    }
+}
+
+group 'io.gitlab.artismarti.smellyj'
+version '1.0.M1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}

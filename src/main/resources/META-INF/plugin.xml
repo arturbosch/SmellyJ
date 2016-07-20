@@ -1,0 +1,41 @@
+<idea-plugin version="2">
+    <id>io.gitlab.artismarti.smellyj</id>
+    <name>SmellyJ</name>
+    <version>1.0.M1</version>
+    <vendor email="artismarti92@gmail.com" url="http://artismarti.gitlab.io">Artur Bosch</vendor>
+
+    <description><![CDATA[
+    ]]></description>
+
+    <change-notes><![CDATA[
+    ]]>
+    </change-notes>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="143.2370.31"/>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Simple Canvas" secondary="true" anchor="right"
+                    factoryClass="io.gitlab.artismarti.smellyj.MyWindow"/>
+    </extensions>
+
+    <application-components>
+    </application-components>
+
+    <project-components>
+    </project-components>
+
+    <actions>
+        <action id="io.gitlab.artismarti.smellyj.HelloAction" class="io.gitlab.artismarti.smellyj.HelloAction"
+                text="Hello" description="blaaa">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
