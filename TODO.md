@@ -6,7 +6,7 @@
 	- Full project analysis 
 - ToolWindow: SmellExplorer like ProjectExplorer on the right
 	- Folder are SmellTypes, Files are Smells
-	- Doubleclick on Smell, jumps to SourceFile
+	- Double click on Smell, jumps to SourceFile
 - Mark Smells as Warnings, Marker on BreakPoint/LineNumber area
 
 ### M2

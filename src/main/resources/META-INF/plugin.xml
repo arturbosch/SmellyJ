@@ -36,6 +36,10 @@
                 text="Hello" description="blaaa">
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
+        <action id="io.gitlab.artismarti.smellyj.AnalyzeAction" class="io.gitlab.artismarti.smellyj.AnalyzeAction"
+                text="Analyze project with SmartSmells" description="blaaa">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
     </actions>
 
 </idea-plugin>

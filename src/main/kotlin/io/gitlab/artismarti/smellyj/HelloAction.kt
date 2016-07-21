@@ -9,6 +9,7 @@ import com.intellij.openapi.ui.Messages
  */
 class HelloAction : AnAction("Hello") {
 	override fun actionPerformed(event: AnActionEvent?) {
-		Messages.showInfoMessage("Hello World!", "Title")
+
+		Messages.showInfoMessage(SmellRegistry.smellSet?.smellSets?.entries?.toString() ?: "", "Title")
 	}
 }
