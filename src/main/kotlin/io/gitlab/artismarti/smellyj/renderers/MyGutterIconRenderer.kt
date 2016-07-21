@@ -24,7 +24,7 @@ class MyGutterIconRenderer(val smelly: Smelly, val smellIcon: Icon, val myAction
 	}
 
 	override fun getTooltipText(): String {
-		return smelly.toString()
+		return smelly.asCompactString()
 	}
 
 	override fun getClickAction(): AnAction {
