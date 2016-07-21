@@ -1,4 +1,4 @@
-package io.gitlab.artismarti.smellyj;
+package io.gitlab.artismarti.smellyj.windows;
 
 import com.intellij.ui.Gray;
 

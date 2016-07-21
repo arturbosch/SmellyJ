@@ -21,8 +21,8 @@
     -->
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="Simple Canvas" secondary="true" anchor="right"
-                    factoryClass="io.gitlab.artismarti.smellyj.MyWindow"/>
+        <!--<toolWindow id="Simple Canvas" secondary="true" anchor="right"-->
+        <!--factoryClass="io.gitlab.artismarti.smellyj.windows.MyWindow"/>-->
     </extensions>
 
     <application-components>
@@ -32,11 +32,19 @@
     </project-components>
 
     <actions>
-        <action id="io.gitlab.artismarti.smellyj.HelloAction" class="io.gitlab.artismarti.smellyj.HelloAction"
-                text="Hello" description="blaaa">
+        <action id="io.gitlab.artismarti.smellyj.DebugAction"
+                class="io.gitlab.artismarti.smellyj.actions.DebugAction"
+                text="Debug SmellRegistry" description="blaaa">
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
-        <action id="io.gitlab.artismarti.smellyj.AnalyzeAction" class="io.gitlab.artismarti.smellyj.AnalyzeAction"
+        <action id="io.gitlab.artismarti.smellyj.InspectAction"
+                class="io.gitlab.artismarti.smellyj.actions.InspectAction"
+                text="Show smells for current file" description="blaaa">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+
+        <action id="io.gitlab.artismarti.smellyj.AnalyzeAction"
+                class="io.gitlab.artismarti.smellyj.actions.AnalyzeAction"
                 text="Analyze project with SmartSmells" description="blaaa">
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>

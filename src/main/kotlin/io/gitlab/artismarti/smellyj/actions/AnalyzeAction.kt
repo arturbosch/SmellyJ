@@ -1,4 +1,4 @@
-package io.gitlab.artismarti.smellyj
+package io.gitlab.artismarti.smellyj.actions
 
 import com.gitlab.artismarti.smartsmells.api.DetectorFacade
 import com.intellij.openapi.actionSystem.AnAction
@@ -6,6 +6,7 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.progress.Task
 import com.intellij.openapi.project.Project
+import io.gitlab.artismarti.smellyj.SmellRegistry
 import java.nio.file.Paths
 
 /**
@@ -23,9 +24,9 @@ class AnalyzeAction : AnAction("Inspect Code with SmartSmells") {
 				indicator.text = "Starting SmartSmellsAnalysis..."
 				indicator.fraction = 0.0
 				val facade = DetectorFacade.fullStackFacade()
-				indicator.fraction = 0.10
+				indicator.fraction = 0.40
 				val smellResult = facade.run(Paths.get(path))
-				indicator.fraction = 0.80
+				indicator.fraction = 0.90
 				SmellRegistry.register(smellResult)
 				indicator.fraction = 1.0
 			}

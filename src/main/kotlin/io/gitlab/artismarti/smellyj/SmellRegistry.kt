@@ -17,4 +17,5 @@ object SmellRegistry {
 	fun forPath(path: String): List<Smelly> {
 		return smellSet?.filter(path) ?: emptyList()
 	}
+
 }

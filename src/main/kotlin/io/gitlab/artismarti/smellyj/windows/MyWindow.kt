@@ -1,4 +1,4 @@
-package io.gitlab.artismarti.smellyj
+package io.gitlab.artismarti.smellyj.windows
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
@@ -14,7 +14,7 @@ class MyWindow : ToolWindowFactory {
 
 	override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
 		val contentFactory = ContentFactory.SERVICE.getInstance()
-		val content = contentFactory.createContent(canvas, "io.gitlab.artismarti.smellyj.MyWindow", false)
+		val content = contentFactory.createContent(canvas, "io.gitlab.artismarti.smellyj.windows.MyWindow", false)
 		toolWindow.contentManager.addContent(content)
 	}
 }
