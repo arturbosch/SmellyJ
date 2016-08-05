@@ -1,12 +1,12 @@
-package io.gitlab.artismarti.smellyj.actions
+package io.gitlab.arturbosch.smellyj.actions
 
-import com.gitlab.artismarti.smartsmells.api.DetectorFacade
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.progress.Task
 import com.intellij.openapi.project.Project
-import io.gitlab.artismarti.smellyj.SmellRegistry
+import io.gitlab.arturbosch.smartsmells.api.DetectorFacade
+import io.gitlab.arturbosch.smellyj.SmellRegistry
 import java.nio.file.Paths
 
 /**

@@ -1,8 +1,8 @@
-package io.gitlab.artismarti.smellyj.renderers
+package io.gitlab.arturbosch.smellyj.renderers
 
-import com.gitlab.artismarti.smartsmells.common.Smelly
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.editor.markup.GutterIconRenderer
+import io.gitlab.arturbosch.smartsmells.common.Smelly
 import java.util.Objects
 import javax.swing.Icon
 

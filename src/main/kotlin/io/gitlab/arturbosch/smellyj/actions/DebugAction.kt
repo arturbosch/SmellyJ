@@ -1,9 +1,9 @@
-package io.gitlab.artismarti.smellyj.actions
+package io.gitlab.arturbosch.smellyj.actions
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.ui.Messages
-import io.gitlab.artismarti.smellyj.SmellRegistry
+import io.gitlab.arturbosch.smellyj.SmellRegistry
 
 /**
  * @author artur

@@ -1,4 +1,4 @@
-package io.gitlab.artismarti.smellyj.actions
+package io.gitlab.arturbosch.smellyj.actions
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
@@ -9,8 +9,8 @@ import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.project.Project
 import com.intellij.util.ui.ColorIcon
-import io.gitlab.artismarti.smellyj.renderers.MyGutterIconRenderer
-import io.gitlab.artismarti.smellyj.SmellRegistry
+import io.gitlab.arturbosch.smellyj.SmellRegistry
+import io.gitlab.arturbosch.smellyj.renderers.MyGutterIconRenderer
 import java.awt.Color
 import java.awt.Font
 

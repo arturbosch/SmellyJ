@@ -25,12 +25,12 @@ intellij {
 	pluginName 'SmellyJ'
 	updateSinceUntilBuild = false
 	publish {
-		username 'artismarti'
+		username 'abosch'
 		password '' // please fill in
 	}
 }
 
-group 'io.gitlab.artismarti.smellyj'
+group 'io.gitlab.arturbosch.smellyj'
 version '1.0.M1'
 
 repositories {
@@ -40,7 +40,7 @@ repositories {
 
 dependencies {
 	compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-	compile 'com.gitlab.artismarti.smartsmells:SmartSmells:M6'
+	compile 'io.gitlab.arturbosch.smartsmells:SmartSmells:M6'
 	compile 'org.yaml:snakeyaml:1.17'
 
 	testCompile 'junit:junit:4.12'

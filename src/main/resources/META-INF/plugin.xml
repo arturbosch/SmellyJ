@@ -1,8 +1,8 @@
 <idea-plugin version="2">
-    <id>io.gitlab.artismarti.smellyj</id>
+    <id>io.gitlab.arturbosch.smellyj</id>
     <name>SmellyJ</name>
     <version>1.0.M1</version>
-    <vendor email="artismarti91@gmail.com" url="http://artismarti.gitlab.io">Artur Bosch</vendor>
+    <vendor email="arturbosch@gmx.de" url="http://arturbosch.gitlab.io">Artur Bosch</vendor>
 
     <description><![CDATA[
     ]]></description>
@@ -22,7 +22,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!--<toolWindow id="Simple Canvas" secondary="true" anchor="right"-->
-        <!--factoryClass="io.gitlab.artismarti.smellyj.windows.MyWindow"/>-->
+        <!--factoryClass="MyWindow"/>-->
     </extensions>
 
     <application-components>
@@ -33,18 +33,18 @@
 
     <actions>
         <action id="io.gitlab.artismarti.smellyj.DebugAction"
-                class="io.gitlab.artismarti.smellyj.actions.DebugAction"
+                class="io.gitlab.arturbosch.smellyj.actions.DebugAction"
                 text="Debug SmellRegistry" description="blaaa">
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
         <action id="io.gitlab.artismarti.smellyj.InspectAction"
-                class="io.gitlab.artismarti.smellyj.actions.InspectAction"
+                class="io.gitlab.arturbosch.smellyj.actions.InspectAction"
                 text="Show smells for current file" description="blaaa">
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
 
         <action id="io.gitlab.artismarti.smellyj.AnalyzeAction"
-                class="io.gitlab.artismarti.smellyj.actions.AnalyzeAction"
+                class="io.gitlab.arturbosch.smellyj.actions.AnalyzeAction"
                 text="Analyze project with SmartSmells" description="blaaa">
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>

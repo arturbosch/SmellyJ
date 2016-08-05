@@ -1,4 +1,4 @@
-package io.gitlab.artismarti.smellyj.renderers
+package io.gitlab.arturbosch.smellyj.renderers
 
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.editor.markup.LineMarkerRenderer

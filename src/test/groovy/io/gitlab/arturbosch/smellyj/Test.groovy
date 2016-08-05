@@ -1,4 +1,4 @@
-package io.gitlab.artismarti.smellyj
+package io.gitlab.arturbosch.smellyj
 
 import spock.lang.Specification
 

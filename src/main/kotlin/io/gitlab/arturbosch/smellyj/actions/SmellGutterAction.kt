@@ -1,4 +1,4 @@
-package io.gitlab.artismarti.smellyj.actions
+package io.gitlab.arturbosch.smellyj.actions
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
