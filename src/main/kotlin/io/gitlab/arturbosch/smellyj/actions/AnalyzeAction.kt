@@ -5,6 +5,7 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.progress.Task
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.ui.Messages
 import io.gitlab.arturbosch.smartsmells.api.DetectorFacade
 import io.gitlab.arturbosch.smartsmells.config.DetectorConfig
 import io.gitlab.arturbosch.smellyj.SmellRegistry
@@ -21,21 +22,26 @@ class AnalyzeAction : AnAction("Inspect Code with SmartSmells") {
 	}
 
 	private fun execute(path: String, project: Project?) {
+
+		val input = Messages.showInputDialog(project, "Enter path to SmartSmells.yml",
+				"Config", Messages.getQuestionIcon())
+
+		if (input.isNullOrEmpty()) return
+
 		object : Task.Backgroundable(project, "SmartSmellsAnalysis, true") {
 			override fun run(indicator: ProgressIndicator) {
 				indicator.text = "Starting SmartSmellsAnalysis..."
 				indicator.fraction = 0.0
 
-				val configPath = Paths.get(System.getProperty("user.dir"))
-						.resolve("/quide-config/Detectors-1.0-bin/rulesets/SmartSmells.yml")
-				println(configPath)
+				println(input)
+				val configPath = Paths.get(input)
 
 				val facade: DetectorFacade
 				if (Files.exists(configPath)) {
-					println("Using config for detector facade!")
+					println("Using configPath for detector facade!")
 					facade = DetectorFacade.fromConfig(DetectorConfig.load(configPath))
 				} else {
-					println("No config found, using defaults...")
+					println("No configPath found, using defaults...")
 					facade = DetectorFacade.fullStackFacade()
 				}
 				indicator.fraction = 0.40
