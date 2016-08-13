@@ -40,7 +40,7 @@ repositories {
 
 dependencies {
 	compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-	compile 'io.gitlab.arturbosch.smartsmells:SmartSmells:M6'
+	compile 'io.gitlab.arturbosch.smartsmells:SmartSmells:M7'
 	compile 'org.yaml:snakeyaml:1.17'
 
 	testCompile 'junit:junit:4.12'

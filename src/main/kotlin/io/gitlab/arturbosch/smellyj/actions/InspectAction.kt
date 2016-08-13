@@ -35,12 +35,12 @@ class InspectAction : AnAction("Inspect current file") {
 				val smellsForFile = SmellRegistry.forPath(fileName)
 
 				smellsForFile.forEach {
+					println(it)
 					val pos = it.positions
-					val highlighter = markupModel.addLineHighlighter(pos.startLine() - 1,
+					val highlighter = markupModel.addLineHighlighter(pos.startLine - 1,
 							HighlighterLayer.WARNING,
 							TextAttributes(Color.yellow, Color.GRAY, Color.GREEN, EffectType.ROUNDED_BOX, Font.PLAIN))
 					highlighter.gutterIconRenderer = MyGutterIconRenderer(it, ColorIcon(10, Color.ORANGE), SmellGutterAction())
-					println(highlighter)
 				}
 
 			}
