@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
 /**
- * @author artur
+ * @author Artur Bosch
  */
 class MyCanvas extends JPanel {
 

@@ -6,7 +6,7 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.content.ContentFactory
 
 /**
- * @author artur
+ * @author Artur Bosch
  */
 class MyWindow : ToolWindowFactory {
 

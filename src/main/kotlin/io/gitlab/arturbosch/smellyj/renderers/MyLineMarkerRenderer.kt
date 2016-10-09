@@ -7,7 +7,7 @@ import java.awt.Graphics
 import java.awt.Rectangle
 
 /**
- * @author artur
+ * @author Artur Bosch
  */
 class MyLineMarkerRenderer constructor(private val myColor: Color) : LineMarkerRenderer {
 

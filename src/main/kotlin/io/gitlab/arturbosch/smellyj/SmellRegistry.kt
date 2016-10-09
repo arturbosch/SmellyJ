@@ -1,10 +1,10 @@
 package io.gitlab.arturbosch.smellyj
 
 import io.gitlab.arturbosch.smartsmells.api.SmellResult
-import io.gitlab.arturbosch.smartsmells.common.Smelly
+import io.gitlab.arturbosch.smartsmells.common.DetectionResult
 
 /**
- * @author artur
+ * @author Artur Bosch
  */
 object SmellRegistry {
 
@@ -14,7 +14,7 @@ object SmellRegistry {
 		smellSet = smellResult
 	}
 
-	fun forPath(path: String): List<Smelly> {
+	fun forPath(path: String): List<DetectionResult> {
 		return smellSet?.filter(path) ?: emptyList()
 	}
 

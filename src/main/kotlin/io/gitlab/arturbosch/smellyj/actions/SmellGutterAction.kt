@@ -4,7 +4,7 @@ import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 
 /**
- * @author artur
+ * @author Artur Bosch
  */
 class SmellGutterAction : AnAction("Smell") {
 	override fun actionPerformed(e: AnActionEvent?) {

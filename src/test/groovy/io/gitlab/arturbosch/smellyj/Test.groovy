@@ -3,7 +3,7 @@ package io.gitlab.arturbosch.smellyj
 import spock.lang.Specification
 
 /**
- * @author artur
+ * @author Artur Bosch
  */
 class Test extends Specification {
 

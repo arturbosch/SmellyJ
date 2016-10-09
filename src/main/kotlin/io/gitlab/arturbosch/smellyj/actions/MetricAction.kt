@@ -10,7 +10,7 @@ import io.gitlab.arturbosch.smartsmells.config.Smell
 import java.nio.file.Paths
 
 /**
- * @author artur
+ * @author Artur Bosch
  */
 class MetricAction : AnAction("Metric") {
 
