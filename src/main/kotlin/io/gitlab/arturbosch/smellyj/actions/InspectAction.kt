@@ -11,13 +11,17 @@ import com.intellij.openapi.project.Project
 import com.intellij.util.ui.ColorIcon
 import io.gitlab.arturbosch.smellyj.SmellRegistry
 import io.gitlab.arturbosch.smellyj.renderers.MyGutterIconRenderer
+import org.apache.log4j.Logger
 import java.awt.Color
 import java.awt.Font
 
 /**
- * @author artur
+ * @author Artur Bosch
  */
 class InspectAction : AnAction("Inspect current file") {
+
+	private val logger = Logger.getLogger(AnalyzeAction::class.java.simpleName)
+
 	override fun actionPerformed(event: AnActionEvent?) {
 		event?.project?.execute()
 	}
@@ -32,15 +36,16 @@ class InspectAction : AnAction("Inspect current file") {
 			val fileName = currentFile?.path
 
 			fileName?.run {
+				markupModel.removeAllHighlighters()
 				val smellsForFile = SmellRegistry.forPath(fileName)
 
 				smellsForFile.forEach {
+					logger.info(it)
 					val pos = it.positions
-					val highlighter = markupModel.addLineHighlighter(pos.startLine() - 1,
+					val highlighter = markupModel.addLineHighlighter(pos.startLine - 1,
 							HighlighterLayer.WARNING,
 							TextAttributes(Color.yellow, Color.GRAY, Color.GREEN, EffectType.ROUNDED_BOX, Font.PLAIN))
 					highlighter.gutterIconRenderer = MyGutterIconRenderer(it, ColorIcon(10, Color.ORANGE), SmellGutterAction())
-					println(highlighter)
 				}
 
 			}

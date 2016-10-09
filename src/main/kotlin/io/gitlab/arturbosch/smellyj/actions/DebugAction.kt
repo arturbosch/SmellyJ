@@ -6,7 +6,7 @@ import com.intellij.openapi.ui.Messages
 import io.gitlab.arturbosch.smellyj.SmellRegistry
 
 /**
- * @author artur
+ * @author Artur Bosch
  */
 class DebugAction : AnAction("Debug") {
 	override fun actionPerformed(event: AnActionEvent?) {

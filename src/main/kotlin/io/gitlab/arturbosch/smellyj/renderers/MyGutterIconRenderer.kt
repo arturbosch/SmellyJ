@@ -2,17 +2,17 @@ package io.gitlab.arturbosch.smellyj.renderers
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.editor.markup.GutterIconRenderer
-import io.gitlab.arturbosch.smartsmells.common.Smelly
+import io.gitlab.arturbosch.smartsmells.common.DetectionResult
 import java.util.Objects
 import javax.swing.Icon
 
 /**
- * @author artur
+ * @author Artur Bosch
  */
-class MyGutterIconRenderer(val smelly: Smelly, val smellIcon: Icon, val myAction: AnAction) : GutterIconRenderer() {
+class MyGutterIconRenderer(val detectionResult: DetectionResult, val smellIcon: Icon, val myAction: AnAction) : GutterIconRenderer() {
 
 	override fun hashCode(): Int {
-		return Objects.hash(smelly, smellIcon, myAction)
+		return Objects.hash(detectionResult, smellIcon, myAction)
 	}
 
 	override fun equals(other: Any?): Boolean {
@@ -24,7 +24,7 @@ class MyGutterIconRenderer(val smelly: Smelly, val smellIcon: Icon, val myAction
 	}
 
 	override fun getTooltipText(): String {
-		return smelly.asCompactString()
+		return detectionResult.asCompactString()
 	}
 
 	override fun getClickAction(): AnAction {

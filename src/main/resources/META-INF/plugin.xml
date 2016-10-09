@@ -37,6 +37,13 @@
                 text="Debug SmellRegistry" description="blaaa">
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
+
+        <action id="io.gitlab.artismarti.smellyj.MetricAction"
+                class="io.gitlab.arturbosch.smellyj.actions.MetricAction"
+                text="Show metrics for current file in console" description="blaaa">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+
         <action id="io.gitlab.artismarti.smellyj.InspectAction"
                 class="io.gitlab.arturbosch.smellyj.actions.InspectAction"
                 text="Show smells for current file" description="blaaa">
